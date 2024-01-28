@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native'
+import { Feather } from '@expo/vector-icons'
 
 import Header from '../../components/Header'
 import MemoListItems from '../../components/MemoListItems'
@@ -13,7 +14,9 @@ const List = (): JSX.Element => {
         <MemoListItems />
         <MemoListItems />
       </View>
-      <CircleButton>＋</CircleButton>
+      <CircleButton>
+        <Feather name='plus' size={40}/>
+      </CircleButton>
     </View>
   )
 }
