@@ -1,21 +1,20 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 
 import Header from '../../components/Header'
+import Button from '../../components/Button'
 
-const Login = (): JSX.Element => {
+const SignUp = (): JSX.Element => {
   return (
     <View style={styles.container}>
       <Header />
       <View style={styles.inner}>
-        <Text style={styles.title}>Log In</Text>
+        <Text style={styles.title}>Sign Up</Text>
         <TextInput style={styles.input} value='Email address' />
         <TextInput style={styles.input} value='Password' />
-        <View style={styles.button}>
-          <Text style={styles.buttonLabel}>Submit</Text>
-        </View>
+        <Button label='Submit' />
         <View style={styles.footer}>
-          <Text style={styles.footerText}>Not registerd?</Text>
-          <Text style={styles.footerLink}>Sign up here!</Text>
+          <Text style={styles.footerText}>Already registerd?</Text>
+          <Text style={styles.footerLink}>Log in.</Text>
         </View>
       </View>
     </View>
@@ -46,19 +45,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 16
   },
-  button: {
-    backgroundColor: '#467FD3',
-    borderRadius: 4,
-    alignSelf: 'flex-start',
-    marginBottom: 24
-  },
-  buttonLabel: {
-    fontSize: 16,
-    lineHeight: 32,
-    color: '#ffffff',
-    paddingVertical: 8,
-    paddingHorizontal: 24
-  },
   footer: {
     flexDirection: 'row'
   },
@@ -75,4 +61,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Login
+export default SignUp
