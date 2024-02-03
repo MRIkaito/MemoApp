@@ -7,8 +7,9 @@ import { useState } from 'react'
 
 import Button from '../../components/Button'
 
-const handlePress = (): void => {
+const handlePress = (email: string, password: string): void => {
   // ログイン
+  console.log(email, password)
   router.replace('/memo/list')
 }
 
@@ -37,7 +38,7 @@ const Login = (): JSX.Element => {
           placeholder='Password'
           textContentType='password'
         />
-        <Button label='Submit' onPress={ handlePress } />
+        <Button label='Submit' onPress={ () => { handlePress(email, password) } } />
         <View style={styles.footer}>
           <Text style={styles.footerText}>Not registerd?</Text>
           <Link href='/auth/sign_up' asChild>
