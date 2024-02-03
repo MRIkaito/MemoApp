@@ -20,7 +20,7 @@ const Hello = (props: Props): JSX.Element => {
 const styles = StyleSheet.create({
   text: {
     color: '#ffffff',
-    backgroundColor: 'blue',
+    backgroundColor: '#ffffff',
     fontSize: 40,
     fontWeight: 'bold',
     padding: 16

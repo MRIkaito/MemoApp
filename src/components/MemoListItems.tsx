@@ -12,7 +12,7 @@ const MemoListItems = (): JSX.Element => {
           <Text style={styles.memoListItemDate}>2023年12月24日</Text>
         </View>
         <TouchableOpacity>
-          <Icon name='delete' size={32} color='#BOBOBO' />
+          <Icon name='delete' size={32} color='#B0B0B0' />
         </TouchableOpacity>
       </TouchableOpacity>
     </Link>
