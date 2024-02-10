@@ -10,7 +10,7 @@ import { auth } from '../../config'
 import Button from '../../components/Button'
 
 const handlePress = (email: string, password: string): void => {
-  // 会員登録r
+  // 会員登録
   console.log(email, password)
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {

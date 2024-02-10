@@ -6,7 +6,7 @@ import { collection, onSnapshot, query, orderBy } from 'firebase/firestore'
 import MemoListItems from '../../components/MemoListItems'
 import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
-import LogOutButton from '../../components/LogOutButton'
+import LogInButton from '../../components/LogInButton'
 import { db, auth } from '../../config'
 import { type Memo } from '../../../types/memo'
 
@@ -14,12 +14,13 @@ const handlePress = (): void => {
   router.push('/memo/create')
 }
 
-const List = (): JSX.Element => {
+const ListAnonymously = (): JSX.Element => {
   const [memos, setMemos] = useState<Memo[]>([])
   const navigation = useNavigation()
   useEffect(() => {
     navigation.setOptions({
       // headerRight: () => { return <LogOutButton /> }
+      headerLeft: () => { return <LogInButton/> }
     })
   }, [])
   useEffect(() => {
@@ -60,4 +61,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default List
+export default ListAnonymously
